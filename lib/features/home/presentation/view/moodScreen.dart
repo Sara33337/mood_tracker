@@ -37,7 +37,7 @@ class _MoodTrackerScreenState extends State<MoodTrackerScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        title: const Text('Mindful Moments Mood Tracker', style: TextStyle(color: Colors.black87)),
+        title: const Text('Mood Tracker App', style: TextStyle(color: Colors.green , fontWeight: FontWeight.bold)),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
@@ -50,7 +50,7 @@ class _MoodTrackerScreenState extends State<MoodTrackerScreen> {
             children: [
               const Text(
                 "How are you feeling right now?",
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: Colors.black87),
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: Colors.green),
               ),
               const SizedBox(height: 30),
               Row(
