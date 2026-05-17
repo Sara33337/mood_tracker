@@ -22,10 +22,8 @@ class _MoodTrackerScreenState extends State<MoodTrackerScreen> {
 
   void _logMood(MoodType type, Color color) {
     setState(() {
-      // Add new entry to the end
       _timelineEntries.add(MoodEntry(type: type, date: DateTime.now(), color: color));
       
-      // Enforce the "past 7 entries" rule by removing older ones if we exceed 7
       if (_timelineEntries.length > 7) {
         _timelineEntries.removeAt(0);
       }
@@ -45,7 +43,6 @@ class _MoodTrackerScreenState extends State<MoodTrackerScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          // Top Section: Selection Buttons
           Column(
             children: [
               const Text(
@@ -66,7 +63,7 @@ class _MoodTrackerScreenState extends State<MoodTrackerScreen> {
             ],
           ),
 
-          // Divider with Context
+    
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40.0),
             child: Row(
@@ -83,7 +80,6 @@ class _MoodTrackerScreenState extends State<MoodTrackerScreen> {
             ),
           ),
 
-          // Bottom Section: Horizontal Scrollable Timeline
           SizedBox(
             height: 160,
             child: _timelineEntries.isEmpty

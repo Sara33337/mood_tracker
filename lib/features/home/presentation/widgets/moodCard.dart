@@ -22,7 +22,6 @@ class _MoodCardState extends State<MoodCard> with SingleTickerProviderStateMixin
       vsync: this,
     );
     
-    // A quick bounce effect up and back down
     _animation = TweenSequence<double>([
       TweenSequenceItem(tween: Tween<double>(begin: 1.0, end: 1.2), weight: 50),
       TweenSequenceItem(tween: Tween<double>(begin: 1.2, end: 1.0), weight: 50),
